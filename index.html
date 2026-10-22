@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.com(clone). Spend less. Smile more.</title>
+    <link rel="icon" type="image/jpg" href="amazonFavicon.jpg">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="function.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div id="logoSection">
+            <div id="menuBox"  onclick="expand()">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </div>
+            <div id="logoBox">
+                <img src="amazonLogo.png" id="logoImage">
+            </div>
+            <div id="locBox">
+                <i class="fa-solid fa-location-dot" id="locIcon"></i>
+                <div id="locText">
+                    <span id="locText1">Deliver to </span>
+                    <span id="locText2">India</span>
+                </div>
+            </div>
+            <div id="searchBarBox" tabindex="0">
+                <p id="searchBarText">All &#9660</p>
+                <input type="text" id="searchBarInput" placeholder="Search Amazon">
+                <span id="searchBarIconBox"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div id="languageBox">
+                <i class="fa-solid fa-flag-usa" id="usaFlagIcon"></i>
+                <span id="languageText">EN</span>
+            </div>
+            <div id="signInBox">
+                <span  id="signInIcon">Sign In <i class="fa-solid fa-circle-user" style="font-size: 25px; margin-left: 5px;"></i></span>
+                <span id="signInText1">Hello, sign in</span>
+                <span id="signInText2">Account & Lists</span>
+            </div>
+            <div id="orderBox">
+                <span id="orderText1">Returns</span>
+                <span id="orderText2">& Orders</span>
+            </div>
+            <div id="cartBox">
+                <i id="cartIcon" class="fa-solid fa-cart-shopping"></i>
+                <span id="cartText">Cart</span>
+            </div>
+        </div>
+        <div id="linkSection">
+            <a href="#" onclick="expand()" id="linkSectionElement" class="linkSectionElementAll"><i class="fa-solid fa-bars"></i> All</a>
+            <a href="#" id="linkSectionElement">Prime Video</a>
+            <a href="#" id="linkSectionElement">Coupons</a>
+            <a href="#" id="linkSectionElement">Customer Serice</a>
+            <a href="#" id="linkSectionElement">Today's Deals</a>
+            <a href="#" id="linkSectionElement">Registry</a>
+            <a href="#" id="linkSectionElement">Gift Cards</a>
+            <a href="#" id="linkSectionElement">Sell</a>
+        </div>
+        <div id="navSection">
+            <div id="navHead">
+                <i class="fa-solid fa-circle-user" id="userIcon"></i>
+                <span>Hello, Sign in</span>
+            </div>
+            <div id="navBody">
+                <div id="navBodySec1">
+                    <h3 id="navBodySecHead" class="navBodySecElement">Digital Content & devices</h3>
+                    <a href="#" id="navBodySec1Element" class="navBodySecElement">Prime Video<i class="fa-solid fa-angle-right" style="color: #9e9e9e;"></i></a>
+                    <a href="#" id="navBodySec1Element" class="navBodySecElement">Amazon Music<i class="fa-solid fa-angle-right"  style="color: #9e9e9e;"></i></a>
+                    <a href="#" id="navBodySec1Element" class="navBodySecElement">Kindle E-readers & books<i class="fa-solid fa-angle-right" style="color: #9e9e9e;"></i></a>
+                    <a href="#" id="navBodySec1Element" class="navBodySecElement">Amazon Appstore<i class="fa-solid fa-angle-right" style="color: #9e9e9e;"></i></a>
+                </div>
+                <div id="navBodySec2">
+                    <h3 id="navBodySecHead" class="navBodySecElement">Shop by Department</h3>
+                    <a href="#" id="navBodySec2Element" class="navBodySecElement">Electronics<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                    <a href="#" id="navBodySec2Element" class="navBodySecElement">Computers<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                    <a href="#" id="navBodySec2Element" class="navBodySecElement">Smart Home<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                    <a href="#" id="navBodySec2Element" class="navBodySecElement">Arts & crafts<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                </div>
+                <div id="navBodySec3">
+                    <h3 id="navBodySecHead" class="navBodySecElement">Programs & featured</h3>
+                    <a href="#" id="navBodySec3Element" class="navBodySecElement">Gift Cards<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                    <a href="#" id="navBodySec3Element" class="navBodySecElement">Amazon Live<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                    <a href="#" id="navBodySec3Element" class="navBodySecElement">International Shopping<i style="color: #9e9e9e;" class="fa-solid fa-angle-right"></i></a>
+                    <a href="#" id="navBodySec3Element" class="navBodySecElement">Amazon Second Chance</a>
+                </div>
+                <div id="navBodySec4">
+                    <h3 id="navBodySecHead" class="navBodySecElement">Help & Settings</h3>
+                    <a href="#" id="navBodySec4Element" class="navBodySecElement">Your Account</a>
+                    <a href="#" id="navBodySec4Element" class="navBodySecElement">English</a>
+                    <a href="#" id="navBodySec4Element" class="navBodySecElement">United States</a>
+                    <a href="#" id="navBodySec4Element" class="navBodySecElement">Customer Service</a>
+                    <a href="#" id="navBodySec4Element" class="navBodySecElement">Sign in</a>
+                </div>
+            </div>
+            <div id="navSectionMob">
+                <div id="navSecHeadMob">
+                    <div id="navSecHeadMobProf">
+                        <span id="navSecHeadMobProfText">Sign in</span>
+                        <span id="navSecHeadMobProfIcon"><i class="fa-regular fa-user"></i></span>
+                    </div>
+                    <div id="navSecHeadMobLogo">
+                        <span id="navSecHeadMobLogoText1">
+                            Browse
+                        </span>
+                        <span id="navSecHeadMobLogoText2">
+                            Amazon
+                        </span>
+                    </div>
+                </div>
+                <div id="navSecBodyMob">
+                    <a class="navSecBodyMobElement" id="navSecBodyMobHead" style="border-bottom: #cccbcb solid 6px;">Amazon Home <i class="fa-regular fa-house"></i></a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobHead" style="border-bottom: #cccbcb solid 6px;">Trending</a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobHead">Top Departments</a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobText">Home</a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobText">Health & Household</a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobText">Books</a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobText">PC</a>
+                    <a class="navSecBodyMobElement" id="navSecBodyMobText">See all <i class="fa-solid fa-chevron-down"></i></a>
+                </div>
+            </div>
+            <div id="closeNav" onclick="contract()"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+    </header>
+    <main id="main">
+        <div id="primBox">
+            <div id="primBoxElement1" class="primBoxElement">
+                <h3 id="primBoxElementHeading">Shop kitchen must haves</h3>
+            </div>
+            <div id="primBoxElement2" class="primBoxElement">
+                <h3 id="primBoxElementHeading">Shope all things beauty</h3>
+            </div>
+            <div id="primBoxElement3" class="primBoxElement">
+                <h3 id="primBoxElementHeading">Start looking sharp</h3>
+            </div>
+            <div id="primBoxElement4" class="primBoxElement">
+                <h3 id="primBoxElementHeading">Toys for little ones</h3>
+            </div>
+            <div id="primBoxElement5" class="primBoxElement">
+                <h3 id="primBoxElementHeading">Level up PC here</h3>
+            </div>
+            <div id="primBoxElement6" class="primBoxElement">
+                <h3 id="primBoxElementHeading">Discover books you can't put down</h3>
+            </div>
+        </div>
+        <div id="secBox">
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Plug in with our electronics</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/headPhones.jpg">
+                            <p id="secBoxElementBodyItemName">Headphones</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/tablets.jpg">
+                            <p id="secBoxElementBodyItemName">Tablets</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/gaming.jpg">
+                            <p id="secBoxElementBodyItemName">Gaming</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/speakers.jpg">
+                            <p id="secBoxElementBodyItemName">Speakers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Score the PCs & Accessories</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/desktops.jpg">
+                            <p id="secBoxElementBodyItemName">Desktops</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/laptops.jpg">
+                            <p id="secBoxElementBodyItemName">Laptops</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/hardDrives.jpg">
+                            <p id="secBoxElementBodyItemName">Hard Drives</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/PCAccessories.jpg">
+                            <p id="secBoxElementBodyItemName">PC Accessories</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Gear up to get fit</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/clothing.jpg">
+                            <p id="secBoxElementBodyItemName">Clothing</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/trackers.jpg">
+                            <p id="secBoxElementBodyItemName">Trackers</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/equipment.jpg">
+                            <p id="secBoxElementBodyItemName">Equipment</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/deals.jpg">
+                            <p id="secBoxElementBodyItemName">Deals</p>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Apparel under $25</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/women.jpg">
+                            <p id="secBoxElementBodyItemName">Women</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/men.jpg">
+                            <p id="secBoxElementBodyItemName">Men</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/girls.jpg">
+                            <p id="secBoxElementBodyItemName">Girls</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/boys.jpg">
+                            <p id="secBoxElementBodyItemName">Boys</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Fantastic Finds for Home</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/kitchen.jpg">
+                            <p id="secBoxElementBodyItemName">Kitchen</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/homeDecor.jpg">
+                            <p id="secBoxElementBodyItemName">Home Decor</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/dining.jpg">
+                            <p id="secBoxElementBodyItemName">Dining</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/smartHome.jpg">
+                            <p id="secBoxElementBodyItemName">Smart Home</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Shine bright with your fashion faves</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/jewelry.jpg">
+                            <p id="secBoxElementBodyItemName">Jewelry</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/handbags.jpg">
+                            <p id="secBoxElementBodyItemName">Handbags</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/footwear.jpg">
+                            <p id="secBoxElementBodyItemName">Footwear</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/beauty.jpg">
+                            <p id="secBoxElementBodyItemName">Beauty</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Unveil your radiance</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/hairCare.jpg">
+                            <p id="secBoxElementBodyItemName">Hair Care</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/fragrances.jpg">
+                            <p id="secBoxElementBodyItemName">Fragrances</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/make-up.jpg">
+                            <p id="secBoxElementBodyItemName">Make-up</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/skinCare.jpg">
+                            <p id="secBoxElementBodyItemName">Skin Care</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle">Level up your PC here</h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/laptops2.jpg">
+                            <p id="secBoxElementBodyItemName">Laptops</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/PCs.jpg">
+                            <p id="secBoxElementBodyItemName">PCs</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/hardDrives2.jpg">
+                            <p id="secBoxElementBodyItemName">Hard Drives</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="imageResource/secBox/monitors.jpg">
+                            <p id="secBoxElementBodyItemName">Monitors</p>
+                        </div>
+                    </a>
+                </div>
+            </div><!--
+            <div id="secBoxElement">
+                <a href="#">
+                    <div id="secBoxElementHead">
+                        <h3 id="secBoxElementTitle"> </h3>
+                         <i class="fa-solid fa-chevron-right" id="rightIcon"></i>
+                    </div>
+                </a>
+                <div id="secBoxElementBody">
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="secBox/ ">
+                            <p id="secBoxElementBodyItemName"> </p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="secBox/ ">
+                            <p id="secBoxElementBodyItemName"> </p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="secBox/ ">
+                            <p id="secBoxElementBodyItemName"> </p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="secBoxElementBodyItem">
+                            <img id="secBoxElementBodyItemImage" src="secBox/ ">
+                            <p id="secBoxElementBodyItemName"> </p>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <footer id="footer">
+        <div id="goTopSection">
+            <i class="fa-solid fa-caret-up" id="goTopIcon"></i>
+            <a href="#" id="goTopPCText">Back to top</a>
+            <a href="#" id="goTopPhoneText">TOP OF PAGE</a>
+        </div>
+        <div id="linksPCSection">
+            <div id="linksPCSectionElement1" class="linksPCSectionElement">
+                <p id="linksPCSectionElementHead" class="linksPCSectionElementText">
+                    Get to Know Us
+                </p>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Careers
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Blog
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    About Amazon
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Investor Relations
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Amazon Devices
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Amazon Science
+                </a>
+            </div>
+            <div id="linksPCSectionElement2" class="linksPCSectionElement">
+                <p id="linksPCSectionElementHead" class="linksPCSectionElementText">
+                    Make Money with Us
+                </p>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Sell products on Amazon
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Sell on Amazon Business
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Sell apps on Amazon
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Become an Affiliate
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Advertise Your Products
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Self-Publish with us
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Host an Amazon Hub
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    > See More Make Money with Us
+                </a>
+            </div>
+            <div id="linksPCSectionElement3" class="linksPCSectionElement">
+                <p id="linksPCSectionElementHead" class="linksPCSectionElementText">
+                    Amazon Payment Products
+                </p>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Amazon Business Card
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Shop with Points
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Reload Your Balance     
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Amazon Currency Converter
+                </a>
+            </div>
+            <div id="linksPCSectionElement4" class="linksPCSectionElement">
+                <p id="linksPCSectionElementHead" class="linksPCSectionElementText">
+                    Let Us Help You
+                </p>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Your Account
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Your Orders
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Shipping Rates & Policies     
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Returns & Replacements
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Manage Your Content and Decives
+                </a>
+                <a href="#" id="linksPCSectionElementLink" class="linksPCSectionElementText">
+                    Help
+                </a>
+            </div>
+        </div>
+        <div id="linksPhoneSection">
+            <a href="#" id="linksPhoneSectionLink">
+                Amazon.com
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Your Order
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Your Lists
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Amazon Live
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Gift Cards
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Registry & Gift List                
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Find a Gift
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Your Account                
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Browsing History
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Sell products on Amazon
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Your Returns
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Recalls and Product Safty Alerts                
+            </a>
+            <a href="#" id="linksPhoneSectionLink">
+                Customer Service
+            </a>
+        </div>
+        <div id="selectorSection">
+            <div id="selectorSectionLogoBox">
+                <img src="amazonLogo.png" alt="Logo" id="selectorSectionLogoBoxImage">
+            </div>
+            <div id="selectorSectionLanguageBox">
+                <i class="fa-solid fa-globe"></i>
+                <a href="#" style="margin: 0 10px 0 10px;">English</a>
+                <i class="fa-solid fa-arrows-up-down"></i>
+            </div>
+            <div id="selectorSectionCurrencyBox">
+                $ USD-U.S. Dollar
+            </div>
+            <div id="selectorSectionCountryBox">
+                <i class="fa-solid fa-flag-usa"></i>
+                <a href="#" style="margin: 0 10px 0 10px;">United States</a>
+            </div>
+        </div>
+        <div id="otherProductsSection">
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">
+                    Amazon Music
+                </span>
+                <span id="otherProductsSectionElementText">
+                    Stream millions of song
+                </span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">
+                    Amazon Ads
+                </span>
+                <span id="otherProductsSectionElementText">
+                    Reach customers wherever they spend their time
+                </span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">
+                    6pm
+                </span>
+                <span id="otherProductsSectionElementText">
+                    Score deals on fashion brands
+                </span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">
+                    AbeBooks
+                </span>
+                <span id="otherProductsSectionElementText">
+                    Books, art & collectibles
+                </span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">
+                    ACX
+                </span>
+                <span id="otherProductsSectionElementText">
+                    Audiobook Publishing Made Easy
+                </span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">
+                    Sell on Amazon
+                </span>
+                <span id="otherProductsSectionElementText">
+                    Start a selling Account
+                </span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Veeqo</span>
+                <span id="otherProductsSectionElementText">Shipping Software Inventory Management</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Amazon Business</span>
+                <span id="otherProductsSectionElementText">Everything for your Business</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">AmazonGlobal</span>
+                <span id="otherProductsSectionElementText">Ship Orders Internationally</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Amazon Web Services</span>
+                <span id="otherProductsSectionElementText">Scalable Cloud Computing Services</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Audiable</span>
+                <span id="otherProductsSectionElementText">Listen to Books & Original Audio Performance</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Box Office Mojo</span>
+                <span id="otherProductsSectionElementText">Find Movie Box Office Data</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Goodreads</span>
+                <span id="otherProductsSectionElementText">Book reviews & recommendations</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">IMDb</span>
+                <span id="otherProductsSectionElementText">Movies, TV & Celebrities</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">IMDbPro</span>
+                <span id="otherProductsSectionElementText">Get info Entertainment Professional Needs</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Kindle Direct Publishing</span>
+                <span id="otherProductsSectionElementText">Indie Digital & Print Publishing Made Easy</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Prime Video Direct</span>
+                <span id="otherProductsSectionElementText">Video Distribution Made Easy</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Shopbop</span>
+                <span id="otherProductsSectionElementText">Designer Fashion Brands</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Woot!</span>
+                <span id="otherProductsSectionElementText">Deals and Shenanigans</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Zappos</span>
+                <span id="otherProductsSectionElementText">Shoes & Clothing</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Ring</span>
+                <span id="otherProductsSectionElementText">Smart Home Security Systems</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">eero WiFi</span>
+                <span id="otherProductsSectionElementText">Stream 4k Video in every Room</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Blink</span>
+                <span id="otherProductsSectionElementText">Smart Security for Every Home</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">Neighbors App</span>
+                <span id="otherProductsSectionElementText">Real-Time Crime & Safety Alerts</span>
+            </a>
+            <a id="otherProductsSectionElement" href="#">
+                <span id="otherProductsSectionElementHead">PillPack</span>
+                <span id="otherProductsSectionElementText">Pharmacy Simlified</span>
+            </a>
+        </div>
+        <div id="endSection">
+            <span id="endSection1">
+                <a href="#" id="endSection1Element">Conditions of use</a>
+                <a href="#" id="endSection1Element">Privacy Notice</a>
+                <a href="#" id="endSection1Element">Consumer Health Data Privacy Disclosure</a>
+                <a href="#" id="endSection1Element">Your Ads Privacy Choices</a>
+            </span>
+            <span id="endSection2">
+                &copy 1996-2026, Amazon.com, Inc. or its affilates
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

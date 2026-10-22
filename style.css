@@ -1,0 +1,864 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: arial;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+#header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+#logoSection{
+    background-color: #131921;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 2px 7px 2px 7px;
+    gap: 2px;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*here we will make every elements except search bar to remain fixed width and strech the search bar*/
+#logoBox{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#locBox{
+    flex-grow: 0;
+    flex-shrink: 0;    
+}
+#searchBarBox{
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+#languageBox{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#signInBox{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#orderBox{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#cartBox{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+/*now we style for logo box and things inside it*/
+#logoBox{
+    border: #131921 1px solid;
+    height: 55.86px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+    border-radius: 2px;
+}
+#logoImage{
+    width: 95px;
+}
+/*now for location box and stuff inside it*/
+#locBox{
+    color: #ffff;
+    display: flex;
+    border: #131921 1px solid;
+    height: 55.86px;
+    width: 95px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 2px;
+}
+#locIcon{
+    font-size: 18px;
+}
+#locText1{
+    font-size: 12px;
+}
+#locText2{
+    font-size: 14px;
+    font-weight: bold;
+}
+#locText{
+    display: flex;
+    flex-direction: column;
+}
+/*now search bar*/
+#searchBarBox{
+    /*border: white 1px solid;*/
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: center;
+    border-radius: 4px;
+    margin: 0 7px 0 7px;
+    flex-shrink: 5;
+    flex-grow: 1;
+}
+#searchBarText{
+    color: rgb(113, 113, 113);
+    background-color: rgb(222, 222, 222);
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    padding: 0 10px 0 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#searchBarIconBox{
+    color: rgb(0, 0, 0);
+    background-color: #f3a847;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    padding: 0 10px 0 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#searchBarInput{
+    flex-grow: 1;
+    flex-shrink: 1;
+    border: 0;
+    border-left: .5px solid rgb(204, 204, 204);
+    padding: 7px;
+    font-size: 14px;
+    outline: none;
+    min-width: 400px;
+    min-width: 0;
+}
+#searchBarInput:focus{
+    outline: none;
+}
+#searchBarBox:focus{
+    outline: 2px solid #f3a847;
+}
+#searchBarIconBox:hover{
+    background-color: #c58839;
+    cursor: pointer;
+}
+#searchBarBox:focus-within{
+    outline: 2px solid #f3a847;
+}
+/*now language box*/
+#languageBox{
+    color: #ffff;
+    height: 55.86px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 0 5px 0 5px;
+    border: #131921 1px solid;
+}
+#languageBox:hover{
+    cursor: pointer;
+}
+/*now sign in box we r gonna work*/
+#signInBox{
+    color: #ffff;
+    height: 55.86px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+    border: #131921 1px solid;
+}
+#signInText1{
+    font-size: 12px;
+}
+#signInText2{
+    font-size: 14px;
+    font-weight: bold;
+}
+#signInBox:hover{
+    cursor: pointer;
+}
+/*now sign in box*/
+#orderBox{
+    color: #ffff;
+    height: 55.86px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+    border: #131921 1px solid;
+}
+#orderText1{
+    font-size: 12px;
+}
+#orderText2{
+    font-size: 14px;
+    font-weight: bold;
+}
+#orderBox:hover{
+    cursor: pointer;
+}
+/*now cart box*/
+#cartBox{
+    color: #ffff;
+    height: 55.86px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+    border: #131921 1px solid;
+}
+#cartIcon{
+    font-size: 20px;
+}
+#cartText{
+    font-size: 13px;
+}
+/*now hover effect in all boxes*/
+#logoBox:hover, #locBox:hover, #languageBox:hover, #signInBox:hover, #orderBox:hover, #cartBox:hover{
+    cursor: pointer;
+    border: white 1px solid;
+}
+
+/*
+logoBox
+locBox
+searchBarBox
+languageBox
+signInBox
+orderBox
+cartBox*/
+
+
+/*now working on the link section*/
+#linkSection{
+    background-color: #232f3e;
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 5px 0 5px;
+    gap: 5px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+/*scroll bar of the link section*/
+#linkSection::-webkit-scrollbar{
+    height: 3px;
+}
+#linkSection::-webkit-scrollbar-track{
+    background: #eeeeee;
+    border-radius: 10px;
+}
+#linkSection::-webkit-scrollbar-thumb{
+    background: #888888;
+    border-radius: 10px;
+}
+#linkSection::-webkit-thumb:hover{
+    background: #444444;
+}
+/*link section elements*/
+#linkSectionElement{
+    color: white;
+    padding: 12px 8px 12px 8px;
+    font-size: 14px;
+    border: 1px #232f3e solid;
+    border-radius: 2px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+#linkSectionElement:hover{
+    border: 1px white solid;
+    border-radius: 2px;
+}
+#main{
+    box-sizing: border-box;
+}
+/*now prime box*/
+#primBox{
+    /*position: absolute;
+    top:105px;*/
+    height: 65vh;
+    display: flex;
+    padding: 0 15px 0 15px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+}
+.primBoxElement{
+    background-color: rgb(255, 255, 255);
+    height: 95%;
+    border-radius: 15px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    aspect-ratio: 0.625;
+    
+    padding: 15px;
+    box-shadow: 10px 10px 10px 10px rgba(137, 137, 137, 0.07);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#primBoxElementHeading{
+    font-size: 25px;
+}
+/*scroll bar in primebox*/
+#primBox::-webkit-scrollbar{
+    height: 4px;
+}
+#primBox::-webkit-scrollbar-track{
+    background: #d7d6d6;
+    border-radius: 20px;
+}
+#primBox::-webkit-scrollbar-thumb{
+    background: #a6a5a5;
+    border-radius: 20px;
+}
+#primBox::-webkit-scrollbar-thumb:hover{
+    background: #797979;
+}
+/*adding respective background images*/
+#primBoxElement1{
+    background-image: image-set(url("./imageResource/primBox/kitchen.avif") type("image/avif"));
+}
+#primBoxElement2{
+    background-image: image-set(url("./imageResource/primBox/beauty.avif") type("image/avif"));
+}
+#primBoxElement3{
+    background-image: image-set(url("./imageResource/primBox/fassion.avif") type("image/avif"));
+}
+#primBoxElement4{
+    background-image: image-set(url("./imageResource/primBox/toys.avif") type("image/avif"));
+}
+#primBoxElement5{
+    background-image: image-set(url("./imageResource/primBox/PC.avif") type("image/avif"));
+}
+#primBoxElement6{
+    background-image: image-set(url("./imageResource/primBox/books.avif") type("image/avif"));
+}
+/*primBox element hover effect*/
+.primBoxElement:hover{
+    cursor: pointer;
+}
+/*media qeries for the header*/
+@media (max-width: 806px) {
+    #logoSection{
+        flex-wrap: wrap;
+    }
+    #searchBarBox{
+        width: 95%;
+    }
+    /*#primBox{
+        top: 152px;
+    }*/
+    #languageBox, #orderBox, #locBox{
+        display: none;
+    }
+    #logoBox, #signInBox, #cartBox{
+        order: 1;
+    }
+    #searchBarBox{
+        order: 2;
+    }
+    #cartText, #signInText1, #signInText2{
+        display: none;
+    }
+    #signInIcon{
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+    }
+    #signInBox{
+        
+        margin-left: auto;
+    }
+    #searchBarBox{
+        margin-bottom: 7px;
+    }
+    .linkSectionElementAll{
+        display: none;
+    }
+    /**/
+    #menuBox{
+        color: #ffff;
+        display: flex;
+        border: #131921 1px solid;
+        padding: 0 5px 0 5px;
+        height: 55.86px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border-radius: 2px;
+    }
+    #menuBox:hover{
+        cursor: pointer;
+        border: #ffff 1px solid;
+    }
+    
+}
+@media(min-width: 806px){
+    #signInIcon, #menuBox{
+        display: none;
+    }
+}
+/*secondarybox*/
+#secBox{
+    box-sizing: border-box;
+    /*position: absolute;*/
+    width: 100%;
+    padding: 7px 15px 7px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+/*adjusting the font size of prime box elements when the heigth is reduced*/
+@media(max-height: 577px){
+    #primBoxElementHeading{
+        font-size: 18px;
+    }
+}
+/*locking the size of prime box after some heigth to prevent it becoming very small*/
+@media(max-height: 550px){
+    #primBox{
+        height: 357.5px;
+    }
+}
+/*media queries to handle position of sec box*/
+
+/*width less than 806 and height less than 550*/
+/*@media (max-width: 806px) and (max-height: 550px){
+    #secBox{
+        top: 509.5px;
+    }
+}*/
+/*width greater than 806 and height less than 550*/
+/*@media (min-width: 806px) and (max-height: 550px){
+    #secBox{
+        top: 467.5px;
+    }
+}*/
+/*width less than 806 and height greater than 550*/
+/*@media (max-width: 806px) and (min-height: 550px){
+    #secBox{
+        top: calc(152px + 65vh);
+    }
+}*/
+/*width greater than 806 and height greater than 550*/
+/*@media (min-width: 806px) and (min-height: 550px){
+    #secBox{
+        top: calc(110px + 65vh);
+    }
+}*/
+@media(max-width: 806px){
+    #main{
+        margin-top: 152px;
+    }
+}
+@media(min-width: 806px){
+    #main{
+        margin-top: 110px;
+    }
+}
+/*now coming to secondary box elements*/
+#secBoxElement{
+    border: #ccc solid 0.5px;
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+    color: #000000;
+    align-items: stretch;
+    justify-content: center;
+}
+#secBoxElementHead{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 12px;
+
+}
+#secBoxElementBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+}
+#secBoxElementBodyItemImage{
+    width: 100%;
+    border-radius: 7%;
+}
+#secBoxElementBodyItemName{
+    margin-bottom: 6px;
+    font-size: 14px;
+    padding: 2px;
+}
+/*media queries to adjust number of secBoxElements in a column*/
+@media(max-width: 950px){
+    #secBox{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 800px){
+    #secBox{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 500px){
+    #secBox{
+        grid-template-columns: 1fr;
+        padding: 7px 25px 7px 25px;
+    }
+}
+@media(max-width: 350px){
+    #secBox{
+        padding: 7px 18px 7px 18px;
+    }
+}
+/*now footer*/
+#footer{
+    color: #ffffff;
+}
+#footer a{
+    color: #ffffff;
+}
+/*gotop section*/
+#goTopSection{
+    background-color: #37475a;
+    font-size: 11px;
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#goTopSection:hover{
+    cursor: pointer;
+    background: #405369;
+}
+/*
+#goTopPhoneText{
+    display: ;
+}
+#goTopPCText{
+    display: none;
+}
+#goTopIcon{
+    display: ;
+}
+*/
+
+/*links pc section*/
+#linksPCSection{
+    background-color: #232f3e;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+    gap: 35px;
+    border-bottom: #405369 solid 0.5px;
+    overflow: hidden;
+}
+#linksPCSectionElementHead{
+    font-weight: bold;
+    font-size: 15px;
+}
+#linksPCSectionElementLink{
+    font-size: 13px;
+}
+.linksPCSectionElement{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*links phone section*/
+#linksPhoneSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 25px 30px 25px;
+    gap: 20px;
+    background-color: #232f3e;
+    font-size: 15px;
+}
+/*selector section*/
+#selectorSection{
+    background-color: #232f3e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    padding: 30px 30px 30px 35px;
+}
+#selectorSectionLogoBox{
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px;
+}
+#selectorSectionLogoBoxImage{
+    height: 100%;
+}
+#selectorSectionLanguageBox, #selectorSectionCurrencyBox, #selectorSectionCountryBox{
+    height: 50px;
+    border: white solid 1px;
+    border-radius: 6px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 17px;
+}
+/*other products section*/
+#otherProductsSection{
+    background-color: #131a22;
+    display: grid;
+    padding: 30px 15% 30px 15%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+#otherProductsSectionElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#otherProductsSectionElementHead{
+    font-weight: bold;
+    font-size: 14px;
+}
+#otherProductsSectionElementText{
+    font-size: 13px;
+}
+/*end section*/
+#endSection{
+    background-color: #131a22;
+    padding: 10px 0 40px 0;
+    font-size: 13px;
+}
+#endSection1{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+}
+#endSection2{
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+/*
+#linksPhoneSection, #goTopIcon, #goTopPhoneText{
+    display: none;
+}*/
+/*media queries for footer*/
+@media(max-width: 950px){
+    #goTopPCText, #linksPCSection, #selectorSectionLogoBox, #otherProductsSection{
+        display: none;
+    }
+    #selectorSection{
+        background-color: #131a22;
+        flex-wrap: wrap;
+    }
+    #selectorSectionLanguageBox, #selectorSectionCurrencyBox, #selectorSectionCountryBox{
+        border: none;
+    }
+}
+@media(min-width: 950px){
+    #goTopPhoneText, #goTopIcon, #linksPhoneSection{
+        display: none;
+    }
+}
+/*nav bar    #232f3e*/
+#navSection{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 400px;
+    box-shadow: 200px 0px 200px rgb(0, 0, 0);
+    display: none;
+}
+#navHead{
+    background-color: #232f3e;
+    color: #ffffff;
+    padding: 13px 20px 13px 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+#userIcon{
+    font-size: 30px;
+    margin-right: 10px;
+}
+#navBody{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+}
+#navBodySec1, #navBodySec2, #navBodySec3, #navBodySec4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: start;
+    border-bottom: #d3d3d3 solid 1px;
+    padding: 5px 0 5px 0;
+}
+.navBodySecElement{
+    padding: 13px 20px 13px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#navBodySec1Element:hover, #navBodySec2Element:hover, #navBodySec3Element:hover, #navBodySec4Element:hover{
+    background-color: #e4e4e4;
+}
+#navSectionMob{
+    height: 100vh;
+}
+#navSecHeadMob{
+    background-color: #232f3e;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    height: 130px;
+    flex-direction: row-reverse;
+    color: white;
+}
+#navSecHeadMobProf{
+    margin-bottom: auto;
+    margin-left: auto;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#navSecHeadMobProfIcon{
+    font-size: 20px;
+    margin-left: 10px;
+}
+#navSecHeadMobLogo{
+    margin-top: auto;
+    margin-right: auto;
+}
+#navSecHeadMobLogoText1{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+#navSecHeadMobLogoText2{
+    display: block;
+    font-size: 28px;
+
+}
+#navSecBodyMob{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+    justify-content: start;
+    align-items: stretch;
+}
+.navSecBodyMobElement{
+    padding: 20px;
+}
+#navSecBodyMobHead{
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+#navSecBodyMobText{
+    font-size: 16;
+}
+@media(max-width: 400px){
+    #navSection{
+        width: 95%;
+    }
+    #navHead, #navBody{
+        display: none;
+    }
+}
+@media(min-width: 401px){
+    #navSectionMob{
+        display: none;
+    }
+}
+#closeNav{
+    z-index: 10;
+    position: fixed;
+    top: 15px;
+    left: 410px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+@media(max-width: 460px){
+    #closeNav{
+        color: #000000;
+        bottom: 30px;
+        right: 60px;
+        top: auto;
+        left: auto;
+    }
+}
