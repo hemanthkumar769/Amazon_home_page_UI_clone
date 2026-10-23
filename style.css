@@ -28,33 +28,13 @@ a{
     width: 100%;
     box-sizing: border-box;
 }
-/*here we will make every elements except search bar to remain fixed width and strech the search bar*/
-#logoBox{
+/*here we will make every elements except search bar to remain fixed width and stretch the search bar*/
+#logoBox, #locBox, #languageBox, #signInBox, #orderBox, #cartBox{
     flex-grow: 0;
     flex-shrink: 0;
-}
-#locBox{
-    flex-grow: 0;
-    flex-shrink: 0;    
 }
 #searchBarBox{
     flex-grow: 1;
-    flex-shrink: 0;
-}
-#languageBox{
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-#signInBox{
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-#orderBox{
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-#cartBox{
-    flex-grow: 0;
     flex-shrink: 0;
 }
 /*now we style for logo box and things inside it*/
@@ -100,7 +80,6 @@ a{
 }
 /*now search bar*/
 #searchBarBox{
-    /*border: white 1px solid;*/
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -307,8 +286,6 @@ cartBox*/
 }
 /*now prime box*/
 #primBox{
-    /*position: absolute;
-    top:105px;*/
     height: 65vh;
     display: flex;
     padding: 0 15px 0 15px;
@@ -384,9 +361,6 @@ cartBox*/
     #searchBarBox{
         width: 95%;
     }
-    /*#primBox{
-        top: 152px;
-    }*/
     #languageBox, #orderBox, #locBox{
         display: none;
     }
@@ -417,7 +391,6 @@ cartBox*/
     .linkSectionElementAll{
         display: none;
     }
-    /**/
     #menuBox{
         color: #ffff;
         display: flex;
@@ -444,7 +417,6 @@ cartBox*/
 /*secondarybox*/
 #secBox{
     box-sizing: border-box;
-    /*position: absolute;*/
     width: 100%;
     padding: 7px 15px 7px 15px;
     display: grid;
@@ -463,32 +435,6 @@ cartBox*/
         height: 357.5px;
     }
 }
-/*media queries to handle position of sec box*/
-
-/*width less than 806 and height less than 550*/
-/*@media (max-width: 806px) and (max-height: 550px){
-    #secBox{
-        top: 509.5px;
-    }
-}*/
-/*width greater than 806 and height less than 550*/
-/*@media (min-width: 806px) and (max-height: 550px){
-    #secBox{
-        top: 467.5px;
-    }
-}*/
-/*width less than 806 and height greater than 550*/
-/*@media (max-width: 806px) and (min-height: 550px){
-    #secBox{
-        top: calc(152px + 65vh);
-    }
-}*/
-/*width greater than 806 and height greater than 550*/
-/*@media (min-width: 806px) and (min-height: 550px){
-    #secBox{
-        top: calc(110px + 65vh);
-    }
-}*/
 @media(max-width: 806px){
     #main{
         margin-top: 152px;
@@ -579,18 +525,6 @@ cartBox*/
     cursor: pointer;
     background: #405369;
 }
-/*
-#goTopPhoneText{
-    display: ;
-}
-#goTopPCText{
-    display: none;
-}
-#goTopIcon{
-    display: ;
-}
-*/
-
 /*links pc section*/
 #linksPCSection{
     background-color: #232f3e;
@@ -697,10 +631,6 @@ cartBox*/
     display: block;
     margin-top: 20px;
 }
-/*
-#linksPhoneSection, #goTopIcon, #goTopPhoneText{
-    display: none;
-}*/
 /*media queries for footer*/
 @media(max-width: 950px){
     #goTopPCText, #linksPCSection, #selectorSectionLogoBox, #otherProductsSection{
